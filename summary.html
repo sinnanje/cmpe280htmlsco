@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <style>
+        
+        
+        .margin-label {
+            margin-right:20px;
+        }
+        .header{
+            background-color: rgb(235,235,235);
+            padding: 5px;
+            margin-bottom: 25px;
+            border-top-left-radius:10px;
+            border-top-right-radius: 10px;
+            text-align:center;
+        }
+        .button1 {
+            border-radius: 10px;
+            background-color: white;
+            width:20%;
+            height:40px;
+            display: block;
+            margin: auto;
+        }
+
+        .form-all {
+            border: solid black;
+            border-width: 2px;
+            border-radius: 10px;
+            border-color: rgb(63,63,63);
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 850px;
+            height:fit-content;
+        }
+
+        .inner-all {
+            width:95%;
+            border: solid black;
+            border-width: 2px;
+            border-color: rgb(63,63,63);
+            margin-left: 2%;
+        }
+
+        .details-all{
+            margin-left: 2%;
+        }
+
+        .text {
+            display: block;
+            font-family: Tahoma;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+        summary:focus{
+            outline: none;
+        }
+
+        .footer{
+            background-color: rgb(235,235,235);
+            text-align:center;
+        }
+
+        </style>
+
+        <script src="common.js"></script>
+        <script>
+            forceUserToLoginIfUnAuthenticated();
+
+        </script>
+
+        <script type="text/javascript">
+            function loaded(){
+                document.getElementById("answeredQuant").textContent = localStorage.getItem("quantAnswered");
+                document.getElementById("correctQuant").textContent = localStorage.getItem("quantCorrect");
+                document.getElementById("scoreQuant").textContent = localStorage.getItem("quantScore");
+
+                document.getElementById("answeredRead").textContent = localStorage.getItem("readAnswered");
+                document.getElementById("correctRead").textContent = localStorage.getItem("readCorrect");
+                document.getElementById("scoreRead").textContent = localStorage.getItem("readScore");
+
+                document.getElementById("answeredVideo").textContent = localStorage.getItem("videoAnswered");
+                document.getElementById("correctVideo").textContent = localStorage.getItem("videoCorrect");
+                document.getElementById("scoreVideo").textContent = localStorage.getItem("videoScore");
+            }
+        </script>
+    </head>
+    <body onload="loaded()">
+        <div class="form-all">
+            <header class="header">Score Card</header>
+            <form>
+
+                <div class="inner-all">
+                    <details class="details-all">
+                        <summary>Quantitative Section</summary>
+                        <p>Number of questions answered: <span id="answeredQuant"></span></p>
+                        <p>Number of correct answers: <span id="correctQuant"></span></p>
+                        <p>Score : <span id="scoreQuant"></span></p>
+                    </details>
+                    <details class="details-all">
+                        <summary>Reading Section</summary>
+                        <p>Number of questions answered: <span id="answeredRead"></span></p>
+                        <p>Number of correct answers: <span id="correctRead"></span></p>
+                        <p>Score : <span id="scoreRead"></span></p>
+                        
+                    </details>
+                    <details class="details-all">
+                        <summary>Audio/Video Section</summary>
+                        <p>Number of questions answered: <span id="answeredVideo"></span></p>
+                        <p>Number of correct answers: <span id="correctVideo"></span></p>
+                        <p>Score : <span id="scoreVideo"></span></p>
+                    </details>
+                   
+                </div>
+                <span class="text">Thank You!!</span>
+                <input type="button" class="button1" value="Finish" onClick="logout()"/>
+            </form>
+            <footer class="footer">
+                <p>Author: Sahana ::<a href="mailto:sahana.innanje@sjsu.edu">sahana.innanje@sjsu.edu</a></p>
+              </footer>
+        </div>
+        
+    </body>
+    
+   
+</html>

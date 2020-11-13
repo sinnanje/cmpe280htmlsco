@@ -1,0 +1,250 @@
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <style>
+        
+        .div-all {
+            border: solid  rgb(63,63,63);
+           border-width: 2px;
+            border-radius: 10px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width:850px;
+            height: fit-content;
+        }
+        
+        .margin-label {
+            margin-right:20px;
+        }
+        .header{
+            background-color: rgb(235,235,235);
+            padding: 5px;
+            margin-bottom: 25px;
+            border-top-left-radius:10px;
+            border-top-right-radius: 10px;
+            text-align:center;
+        }
+        .button1 {
+            border-radius: 10px;
+            background-color: white;
+            height:40px;
+        }
+        .logoutbutton {
+            border-radius: 10px;
+            background-color: white;
+            height:20px;
+        }
+        input[type="radio"]{
+            margin: 0 20px 0 30px;
+        }
+
+        td{
+            padding:10px;
+        }
+        </style>
+         
+        <script src="common.js"></script>
+        <script>
+            forceUserToLoginIfUnAuthenticated();
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    </head>
+    <body>
+        <div class="div-all">
+            <header class="header">Question 2</header>
+            <form name="q2" id="q2">
+            <table style="margin-left: 20px;">
+                <tr>
+                    <td style="vertical-align: top; padding-right: 60px;">
+                        Select the cosine theorem formula.
+                    </td>
+            
+            
+            <tr>
+                <td>
+                    <input type="radio" id="op1" name="answers" value="1">
+                    <math> 
+                        <mrow>
+                            <mrow>
+                                <mi>cos</mi>
+                                <mo> ( </mo>
+                                <mrow>
+                                    <mi> &alpha; </mi>
+                                    <mo> &plusmn; </mo>
+                                    <mi> &beta; </mi>
+                                </mrow>
+                                <mo> ) </mo>
+                            </mrow>
+                            <mo>=</mo>
+                            <mrow>
+                                <mi>cos</mi>
+                                <mi>&alpha;</mi>
+                                <mi>cos</mi>  
+                                <mi>&beta;</mi>
+                            </mrow>
+                            <mrow><mo>&plusmn;</mo></mrow>
+                            <mrow>
+                                <mi>sin</mi>
+                                <mi>&alpha;</mi>
+                                <mi>sin</mi>  
+                                <mi>&beta;</mi>
+                            </mrow>
+                        </mrow>
+                    </math>
+                </td>
+                <td>
+                    <input type="radio" id="op2" name="answers" value="2">
+                    <math> 
+                        <mrow>
+                            <mrow>
+                                <mi>sin</mi>
+                                <mo> ( </mo>
+                                <mrow>
+                                    <mi> &alpha; </mi>
+                                    <mo> &plusmn; </mo>
+                                    <mi> &beta; </mi>
+                                </mrow>
+                                <mo> ) </mo>
+                            </mrow>
+                            <mo>=</mo>
+                            <mrow>
+                                <mi>sin</mi>
+                                <mi>&alpha;</mi>
+                                <mi>cos</mi>  
+                                <mi>&beta;</mi>
+                            </mrow>
+                            <mrow><mo>&plusmn;</mo></mrow>
+                            <mrow>
+                                <mi>cos</mi>
+                                <mi>&alpha;</mi>
+                                <mi>sin</mi>  
+                                <mi>&beta;</mi>
+                            </mrow>
+                        </mrow>
+                    </math> 
+                </td>
+            </tr>
+           
+           
+            <tr>
+                <td>
+                    <input type="radio" id="op3" name="answers" value="3">
+            <math> 
+                <mrow>
+                    <mrow>
+                        <mi>sin</mi>
+                        <mi> &alpha; </mi>
+                        <mo> &plus; </mo>
+                        <mi>sin</mi>
+                        <mi> &beta; </mi>
+                        
+                    </mrow>
+                    <mo>=</mo>
+                    <mrow>
+                        <mi>2</mi>
+                        <mrow>
+                            <mi>sin</mi>
+                            <mi>(</mi>
+                            <mfrac>
+                                <mrow>
+                                    <mi>&alpha;</mi>
+                                    <mo>&plus;</mo> 
+                                    <mi>&beta;</mi>
+                                </mrow>
+                                <mrow><mi>2</mi></mrow>
+                            </mfrac>
+                            <mi>)</mi>
+                        </mrow>
+                        <mrow>
+                            <mi>cos</mi>
+                            <mi>(</mi>
+                            <mfrac>
+                                <mrow>
+                                    <mi>&alpha;</mi>
+                                    <mo>&minus;</mo> 
+                                    <mi>&beta;</mi>
+                                </mrow>
+                                <mrow><mi>2</mi></mrow>
+                            </mfrac>
+                            <mi>)</mi>
+                        </mrow>
+                    </mrow>
+                    
+                </mrow>
+            </math> 
+                </td>
+                <td>
+                    <input type="radio" id="op4" name="answers" value="4">
+                    <math> 
+                        <mrow>
+                            <mrow>
+                                <mi>sin</mi>
+                                <mi> &alpha; </mi>
+                                <mo> &minus; </mo>
+                                <mi>sin</mi>
+                                <mi> &beta; </mi>
+                                
+                            </mrow>
+                            <mo>=</mo>
+                            <mrow>
+                                <mi>2</mi>
+                                <mrow>
+                                    <mi>cos</mi>
+                                    <mi>(</mi>
+                                    <mfrac>
+                                        <mrow>
+                                            <mi>&alpha;</mi>
+                                            <mo>&plus;</mo> 
+                                            <mi>&beta;</mi>
+                                        </mrow>
+                                        <mrow><mi>2</mi></mrow>
+                                    </mfrac>
+                                    <mi>)</mi>
+                                </mrow>
+                                <mrow>
+                                    <mi>sin</mi>
+                                    <mi>(</mi>
+                                    <mfrac>
+                                        <mrow>
+                                            <mi>&alpha;</mi>
+                                            <mo>&minus;</mo> 
+                                            <mi>&beta;</mi>
+                                        </mrow>
+                                        <mrow><mi>2</mi></mrow>
+                                    </mfrac>
+                                    <mi>)</mi>
+                                </mrow>
+                            </mrow>
+                            
+                        </mrow>
+                    </math> 
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <input type="button" class="button1" value="Submit & Next Question" onClick="submitAnswer('q2','answers',null)"/>
+                    <span>&NonBreakingSpace;&NonBreakingSpace;</span>
+                    <input type="button" class="button1" value="Cancel & Clear Selection" onClick="clearSelection('q2','answers')"/>
+                    <span>&NonBreakingSpace;&NonBreakingSpace;</span>
+                    <input type="button" class="button1" value="Click to Exit" onClick="calculateScore()"/>
+                </td>
+            </tr>
+
+            </tr>
+            </table>
+            </form>
+
+            
+         </div>   
+
+         
+        
+    </body>
+    
+   
+</html>

@@ -1,0 +1,99 @@
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <style>
+        
+        
+        .margin-label {
+            margin-right:20px;
+        }
+        .header{
+            background-color: rgb(235,235,235);
+            padding: 5px;
+            margin-bottom: 25px;
+            border-top-left-radius:10px;
+            border-top-right-radius: 10px;
+            text-align:center;
+        }
+        textarea {
+            height: 0px;
+            overflow-y:scroll;
+            padding-bottom: 100px; /*your height*/
+            vertical-align: top;
+        }
+        .button1 {
+            border-radius: 10px;
+            background-color: white;
+            width:20%;
+            height:40px;
+        }
+
+        .logoutbutton {
+            border-radius: 10px;
+            background-color: white;
+            height:20px;
+        }
+
+        .form-all {
+            border: solid black;
+            border-width: 2px;
+            border-radius: 10px;
+            border-color: rgb(63,63,63);
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 850px;
+            height: fit-content;
+        }
+
+        </style>
+         <script src="common.js"></script>
+    
+         <script>
+             forceUserToLoginIfUnAuthenticated();
+      
+         </script>
+    </head>
+    <body>
+        <div class="form-all">
+            <header class="header">Survey</header>
+            <form style="margin-left: 30px;">
+                <span>How do you like the center?</span>
+                <br/><br/>
+                <label for="textfield">Comments: </label>
+                <textarea rows=30 cols=60 id="textfield"></textarea>
+                <br/><br/>
+                <label>Select test area location: </label>
+                <br/><br/>
+                <label>City: </label>
+                <input list="locations" name="locations" id="location">
+                <datalist id="locations">
+                    <option value="San Jose">
+                    <option value="San Francisco">
+                    <option value="Palo Alto">
+                    <option value="Mountain View">
+                </datalist>
+
+                <label>Room #: </label>
+                <input list="rooms" name="rooms" id="room">
+                <datalist id="rooms">
+                    <option value="Room 337">
+                    <option value="Room 210">
+                    <option value="Room 110">
+                    <option value="Room 410">
+                </datalist>
+                <br/><br/>
+                <input type="button" class="button1" value="Submit & Get Score" onClick="calculateScore()"/>
+                <input type="button" class="button1" value="Skip & Get Score" onClick="calculateScore()"/>
+                <input type="button" class="button1" value="Click to Exit" onClick="calculateScore()"/>
+            </form>
+            
+        </div>
+        
+    </body>
+    
+   
+</html>

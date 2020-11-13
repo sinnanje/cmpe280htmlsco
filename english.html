@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <style>
+        
+        .div-all {
+            border: solid  rgb(63,63,63);
+;           border-width: 2px;
+            border-radius: 10px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 950px;
+            height: fit-content;
+        }
+        
+        .margin-label {
+            margin-right:20px;
+        }
+        .header{
+            background-color: rgb(235,235,235);
+            padding: 5px;
+            margin-bottom: 25px;
+            border-top-left-radius:10px;
+            border-top-right-radius: 10px;
+            text-align:center;
+        }
+        .button1 {
+            border-radius: 10px;
+            background-color: white;
+            height:40px;
+        }
+        .logoutbutton {
+            border-radius: 10px;
+            background-color: white;
+            height:20px;
+        }
+        input[type="radio"]{
+            margin: 0 20px 0 30px;
+        }
+
+        .hiddenRadioButton{ display:none; }
+
+        .showRadioButton{ display:inline-block; }
+
+        td{
+            padding:10px;
+        }
+        
+        </style>
+        <script src="common.js"></script>
+        <script>
+            forceUserToLoginIfUnAuthenticated();
+        </script>
+        <script>
+
+            
+           /*function formSubmit(){
+               // get value of selected 'ship' radio button in 'demoForm'
+                var val1 = getRadioVal( document.getElementById('myForm'), 'optiongroup1' );
+                var val2 = getRadioVal( document.getElementById('myForm'), 'optiongroup2' );
+                document.getElementById("blank1").value = val1;
+                document.getElementById("blank2").value = val2;
+           }*/
+
+           function showOptions1(){
+                document.getElementById("op1").className = "showRadioButton";
+                document.getElementById("lop1").className = "showRadioButton";
+                document.getElementById("op2").className = "showRadioButton";
+                document.getElementById("lop2").className = "showRadioButton";
+                document.getElementById("op3").className = "showRadioButton";
+                document.getElementById("lop3").className = "showRadioButton";
+           }
+
+           function showOptions2(){
+                document.getElementById("op21").className = "showRadioButton";
+                document.getElementById("lop21").className = "showRadioButton";
+                document.getElementById("op22").className = "showRadioButton";
+                document.getElementById("lop22").className = "showRadioButton";
+                document.getElementById("op23").className = "showRadioButton";
+                document.getElementById("lop23").className = "showRadioButton";
+           }
+
+        </script>
+    </head>
+    <body>
+        <div class="div-all">
+            <header class="header">Question 3</header>
+            <form id="q3" name="q3" >
+            <table style="margin-left: 20px;">
+                <tr>
+                <td style="vertical-align: top; padding-right: 60px;">
+                   As per the latest twitter news, complete the article snippet given by
+                        selecting appropriate choices  for the blanks.
+                </td>
+
+                <td rowspan="2">
+                    <p>Twitter wants more cash. The company announced two 
+                    $<mark id="blank1" onclick="showOptions1()">_______</mark>
+                    million debt offerings in a filing today, each with a
+                    potential $100 increase provided that the sales are 
+                    oversubscribed. Assuming full tip, including the $100 million 
+                    boosters. <mark id="blank2" onclick="showOptions2()">_______</mark> 
+                    will raise up tp $1.5 billion with the two
+                    offerings. 
+                    </p>
+                    <br/>
+                    <span>Click on <b>HIGHLIGHTED BLANKS</b> to get options.</span>
+                    <br/><br/>
+                    <span>Source: https://techcrunch.com/2014/09/10/twitter-to-raise-up-to-1-5b-in-debt-offering/</span>
+                    
+                </td>
+            
+            </tr>
+            
+                <tr>
+                    <td style="width: 50%; vertical-align: top;">
+                        <input type="radio" id="op1" name="answers1" value="1" class="hiddenRadioButton">
+                        <label id="lop1" for="op1" class="hiddenRadioButton">$650</label>
+                        <input type="radio" id="op21" name="answers2" value="1" class="hiddenRadioButton">
+                        <label id="lop21" for="op21" class="hiddenRadioButton">Twitter</label>
+                        <br/>
+                        <input type="radio" id="op2" name="answers1" value="2" class="hiddenRadioButton">
+                        <label id="lop2" for="op2" class="hiddenRadioButton">$550</label>
+                        <input type="radio" id="op22" name="answers2" value="2" class="hiddenRadioButton">
+                        <label id="lop22" for="op22" class="hiddenRadioButton">Google</label>
+                        <br/>
+                        <input type="radio" id="op3" name="answers1" value="3" class="hiddenRadioButton">
+                        <label id="lop3" for="op3" class="hiddenRadioButton">$650</label>
+                        <input type="radio" id="op23" name="answers2" value="3" class="hiddenRadioButton">
+                        <label id="lop23" for="op23" class="hiddenRadioButton">Facebook</label>
+                    </td>
+
+                    
+
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="button1" value="Submit & Next Question" onClick="submitAnswer('q3','answers1','answers2')"/>
+                        <span>&NonBreakingSpace;&NonBreakingSpace;</span>
+                        <input type="button" class="button1" value="Cancel & Clear Selection" onClick="clearSelection('q3','answers1','answers2')"/>
+                        <span>&NonBreakingSpace;&NonBreakingSpace;</span>
+                        <input type="button" class="button1" value="Click to Exit" onClick="calculateScore()"/>
+                    </td>
+                    
+                </tr>
+
+            </table>
+           </form>
+          <!-- <div style="text-align: right; margin-right: 10px; margin-bottom: 10px;"><input type="button" class="logoutbutton" value="Logout" onClick="logout()"></div>-->
+               
+        </div>
+       
+    </body>
+    
+   
+</html>

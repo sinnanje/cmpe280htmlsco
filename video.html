@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <style>
+        
+        .div-all {
+            border: solid  rgb(63,63,63);
+;           border-width: 2px;
+            border-radius: 10px;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 950px;
+            height: fit-content;
+        }
+        
+        .margin-label {
+            margin-right:20px;
+        }
+        .header{
+            background-color: rgb(235,235,235);
+            padding: 5px;
+            margin-bottom: 25px;
+            border-top-left-radius:10px;
+            border-top-right-radius: 10px;
+            text-align:center;
+        }
+        .button1 {
+            border-radius: 10px;
+            background-color: white;
+            height:40px;
+        }
+        .logoutbutton {
+            border-radius: 10px;
+            background-color: white;
+            height:20px;
+        }
+        input[type="radio"]{
+            margin: 0 20px 0 30px;
+        }
+
+        td{
+            padding: 10px;
+        }
+        
+        </style>
+         <script src="common.js"></script>
+    
+         <script>
+             forceUserToLoginIfUnAuthenticated();
+         </script>
+    </head>
+    <body>
+        <div class="div-all">
+            <header class="header">Question 4</header>
+            <form id="q4" name="q4">
+            <table style="margin-left: 20px;">
+                <tr><td style="vertical-align: top; padding-right: 60px;">
+                    Watch the video and answer the following question.<br/>
+                        What is the source as mentioned in the video?
+                </td>
+
+                <td rowspan="2">
+                    <!--iframe type="text/html" 
+                    width="400" height="240"
+                    src="https://www.youtube.com/embed/JwgcByUyEyI"
+                    frameborder="0">
+                    </iframe> -->
+                    <video width="400" controls>
+                       <!-- <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">-->
+                        <source src="Expedition 63 Solar Annual Eclipse - June 21, 2020.mp4" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+                    
+                </td>
+            
+            </tr>
+            
+                <tr>
+                    <td style="width: 50%; vertical-align: top;">
+                        <input type="radio" id="op1" name="answers" value="1">
+                        <label for="op1">NASA.gov</label>
+                        <input type="radio" id="op2" name="answers" value="2">
+                        <label for="op2">DATA.gov</label><br>
+                        <input type="radio" id="op3" name="answers" value="3">
+                        <label for="op3">Facebook</label>
+                        <input type="radio" id="op4" name="answers" value="4">
+                        <label for="op4">xyz.net</label><br>
+                    </td>
+
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" class="button1" value="Submit & Next Question" onClick="submitAnswer('q4','answers',null)"/>
+                        <span>&NonBreakingSpace;&NonBreakingSpace;</span>
+                        <input type="button" class="button1" value="Cancel & Clear Selection" onClick="clearSelection('q4','answers')"/>
+                        <span>&NonBreakingSpace;&NonBreakingSpace;</span>
+                        <input type="button" class="button1" value="Click to Exit" onClick="calculateScore()"/>
+                    </td>
+                    <td>
+                        <span>Expedition 63 unlock program</span>
+                        <br/><span>Source: http://nasa.gov/</span>
+                    </td>
+                </tr>
+
+            </table>
+           
+
+            </form>
+
+          
+        </div>
+        
+    </body>
+    
+   
+</html>
